@@ -37,6 +37,8 @@ Open your VSCode settings (`Code > Preferences > Settings`).
 ### Using VSCode
 
 Here are some useful hotkeys you can use when working in VSCode. (Note: These are based on Mac, so if you're using a PC, replace ⌘ (`CMD`) with `CTRL`, and `OPTION` with `ALT`.
+- `CTRL` + ` (backtick): open the terminal
+  - _Note: This is the CTRL key on Mac, not the CMD key._
 - ⌘ + `P`: search for a file (by name) in your workspace
 - ⌘ + `SHIFT` + `F`: search for any string through all the files in your workspace
 - ⌘ + `SHIFT` + `L`: select all occurrences of the current selection
