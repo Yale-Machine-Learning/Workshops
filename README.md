@@ -17,6 +17,31 @@ An integrated development environment (or IDE) is the application you use to wri
 
 Visit Microsoft's [Visual Studio Code site](https://code.visualstudio.com) to download the stable build of VSCode for your operating system.
 
+### Using VSCode
+
+Here are some useful hotkeys you can use when working in VSCode. (Note: These are based on Mac, so if you're using a PC, replace ⌘ (`CMD`) with `CTRL`, and `OPTION` with `ALT`.
+- ⌘ + `P`: search for a file (by name) in your workspace
+- ⌘ + `SHIFT` + `F`: search for any string through all the files in your workspace
+- ⌘ + `SHIFT` + `L`: select all occurrences of the current selection
+- `OPTION` + click: select multiple locations, i.e. producing multiple cursors where you can type to simultaneously
+
+### Install VSCode extensions
+
+Click the extensions section. (This is on the vertical bar at the very left of the VSCode window.) Install the following extensions.
+- Python
+- Pylance
+- Remote - SSH
+- Remote - SSH: Editing Configuration
+- Git History
+- GitLens
+
+### Useful VSCode settings
+
+Open your VSCode settings (`Code > Preferences > Settings`).
+- Search for "trim". Enable `Files: Trim Trailing Whitespace`.
+- (Optional) By default, VSCode uses "preview mode", where files don't permanently open until you double-click or edit them. If this is unintuitive to you, you can search for "enable preview" and uncheck `Workbench > Editor: Enable Preview` and `Workbench: Enable Preview From Quick Open`. 
+  - _Note from Faiaz: I keep preview mode on since it's useful when you're clicking through a large codebase and don't want all the files you view briefly to remain open in your editor._
+
 ## Version Control <a name="version-control"></a>
 
 ### Setting up Git on your local machine via SSH
