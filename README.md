@@ -11,7 +11,11 @@ Docs and code samples from workshops, including software setup and PyTorch/Tenso
 
 ## Integrated Development Environment (IDE) <a name="ide"></a>
 
+An integrated development environment (or IDE) is the application you use to write your code (i.e. a "source code editor"), and it's often bundled with debugging tools, a version control GUI, clickable class hierarchies, build tools, and so on. We'll be using VSCode, which is a popular IDE used in both research and industry. (PyCharm is another great option, particularly to debug Python — but we'll stick with VSCode.)
+
 ### Installing VSCode
+
+Visit Microsoft's [Visual Studio Code site](https://code.visualstudio.com) to download the stable build of VSCode for your operating system.
 
 ## Version Control <a name="version-control"></a>
 
