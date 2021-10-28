@@ -197,7 +197,18 @@ $ conda env list
 
 ### Creating a `requirements.txt` file and freezing dependencies
 
+A `requirements.txt` stores all software dependencies (i.e. version numbers of packages and libraries, e.g. `torch==1.9.0`) in a simple text file. There are two ways to generate a `requirements.txt` file.
+* You can use `pip freeze > requirements.txt` to save all packages in your current environment into your requirements file. (Note that this simply redirects the output of `pip freeze` into the text file.)
+* One downside to `pip freeze` is that it lists _all_ packages in your environment — even if you're not actually currently using it in your current project. This might not be an issue for your projects, but sometimes this can lead to really bulky `requirements.txt` files with unnecessary dependencies. An alternative is to use `pipreqs` to list the dependencies based on all `import`s in your project. (Check out [their repo](https://github.com/bndr/pipreqs) here.) First `pip install pipreqs` once, then you can do `pipreqs requirements.txt` (or `pipreqs requirements.txt --force` to overwrite an existing requirements file).
+
 ### Adding, commiting, and pushing changes with Git
+
+TLDR
+* `git add .`
+* `git commit -m "This is my commit message"`
+* `git push`
+
+We'll go over Git commands in more detail at a later time.
 
 ## Installing PyTorch <a name="installing-pytorch"></a>
 
