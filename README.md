@@ -192,7 +192,7 @@ Note that every time you reset your terminal, you need to **reactivate your virt
 
 You can see all your environments with the following.
 ```
-conda env list
+$ conda env list
 ```
 
 ### Creating a `requirements.txt` file and freezing dependencies
@@ -201,7 +201,7 @@ conda env list
 
 ## Installing PyTorch <a name="installing-pytorch"></a>
 
-PyTorch can be installed very easily using conda. Visit [PyTorch's website](https://pytorch.org) and select the configuration based on your machine. This will be `Stable` for your build, `Conda` for your package, `Python` for your language, and `CPU` for your compute platform. (Later on, when we run model training on GPU with CUDA, we'll install the appropriate CUDA versions, but don't worry about that for now!)
+PyTorch can be installed very easily using Conda. Visit [PyTorch's website](https://pytorch.org) and select the configuration based on your machine. This will be `Stable` for your build, `Conda` for your package, `Python` for your language, and `CPU` for your compute platform. (Later on, when we run model training on GPU with CUDA, we'll install the appropriate CUDA versions, but don't worry about that for now!)
 
 <img width="811" alt="image" src="https://user-images.githubusercontent.com/42232624/138920194-c443ef1c-88ac-4435-929c-3043a5408077.png">
 
