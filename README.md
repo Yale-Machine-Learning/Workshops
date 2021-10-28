@@ -132,7 +132,7 @@ Next, add your SSH private key to the ssh-agent.
 $ ssh-add -K ~/.ssh/id_ed25519
 ```
 
-Finally, you need to add your new SSH key to your GitHub account. Copy the SSH public key to your clipboard using the appropriate command for your operating system.
+Finally, you need to add your new SSH key to your GitHub account. (Refer to [these docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).) Copy the SSH public key to your clipboard using the appropriate command for your operating system.
 ```
 # Mac
 $ pbcopy < ~/.ssh/id_ed25519.pub
@@ -148,15 +148,52 @@ $ cat ~/.ssh/id_ed25519.pub
 # displayed in the terminal to your clipboard
 ```
 
-Then go to GitHub's website, click your profile icon in the top right, and click Settings. Go to SSH and GPG keys in the sidebar, and press `New SSH Key` or `Add SSH Key`. For the title, you can call it something like `faiaz-macbook` or `faiaz-work-laptop` (e.g. identifying yourself and the device you're using, in case later on you add additional SSH keys from different devices). Paste your key into the Key field, press Add, and you're done!
+Then go to GitHub's website, click your profile icon in the top right, and click Settings. Go to SSH and GPG keys in the sidebar, and press `New SSH Key` or `Add SSH Key`. For the title, you can call it something like `faiaz-macbook` or `faiaz-work-laptop` (i.e. identifying yourself and the device you're using, in case later on you add additional SSH keys from different devices). Paste your key into the Key field, press Add, and you're done!
 
 ### Cloning your project repository
 
-Now, you can clone repositories with SSH.
+Now, you can clone repositories with SSH. There's a lot of terminology around Git and GitHub — like origin, local, and upstream repositories, master/main and development branches, and so on — which we'll dive into later on when we work on your project codebases. For now, we'll just understand one simple idea: The code repository on GitHub is the **origin repository** — it's the one that's everyone can see, and for all intents and purposes is the "official" version of the repository. However, to write code to make changes to that repository, you need to **clone** it onto your local machine, thus making a **local repository**. You can make your changes locally, and then **push** them back to the origin repository.
+
+This diagram helped me understand this terminology. (I tried finding the source to give credit, but I pasted this screenshot into my notes a few years ago, so I'm not sure who made it.) Again, if this looks confusing to you, don't worry about it!
+
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/42232624/139261127-cd79bbc3-efc0-40df-b69e-ac3532b1f6a8.png">
+
+Now that we've gotten that out of the way, to actually clone a repository, all you need to do is go to its GitHub page, click the green `Code` button, select the SSH option under `Clone`, and copy the SSH URL (which looks something like `git@github.com:example_user/example_repo.git`). Then in your terminal, navigate to the directory where you want this cloned directory to live in, and clone it.
+
+```
+$ cd parent/directory/you/want
+$ git clone git@github.com:example_user/example_repo.git # Paste the SSH URL you copied
+```
+
+Now you have made a local repository by cloning the origin repository. Nice work!
 
 ## Dependency Management and Virtual Environment <a name="dependency-venv"></a>
 
-### Creating a virtual environment with conda
+A **dependency** (or **requirement**) is a version of a specific software package used in a code repository or project. For example, we could use PyTorch version 1.9 or 1.10. When you install software onto your machine, you're installing a specific version of it. Projects sometimes require a specific version of a software package or library, since they might be using a certain feature tied to an older version, might have unresolved bugs for different versions, or just have not been updated to be compatible with the most recent version. But what if you were working on two different projects, one which required PyTorch version 1.4.0 and another which required 1.10.0? Here, we have a conflict in our requirements!
+
+The solution is to use a **virtual environment**, which (as Python describes in [its docs](https://docs.python.org/3/tutorial/venv.html)) is "a self-contained directory tree that contains a Python installation for a particular version of Python, plus a number of additional packages." This means that for each project, you can have a separate virtual environment, which means you can install the specific versions of the packages that you need for your project, and not have to worry about it being messed up by dependencies of other projects.
+
+Good software engineering practice manages virtual environments (and a related concept of containers, e.g. via Docker, which we'll explore later on) very carefully, since they are crucial for both streamlined development and for code reproducibility (i.e. running the same project on multiple devices by having a common set of requirements).
+
+### Creating a virtual environment with Conda
+
+We will use Conda for our virtual environments. (Another option is Python's built-in `venv`.) Install Conda from [their site](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html). Once it's installed, try running `conda list` in your terminal to make sure it works.
+
+Again, you should always use a new virtual environment for every project. To create a new virtual environment with Conda, run the following, replacing the environment name `my_project_env` with a concise version of your project name. (Note that the name of the current environment is listed to the left of the `$`, with the default system-wide environment being `base`.)
+```
+(base) $ conda create --name my_project_env python=3.7
+```
+To activate that virtual environment, run the following.
+```
+(base) $ conda activate my_project_env
+(my_project_env) $ ...
+```
+Note that every time you reset your terminal, you need to **reactivate your virtual environment!**
+
+You can see all your environments with the following.
+```
+conda env list
+```
 
 ### Creating a `requirements.txt` file and freezing dependencies
 
