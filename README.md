@@ -160,11 +160,11 @@ This diagram helped me understand this terminology. (I tried finding the source 
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/42232624/139261127-cd79bbc3-efc0-40df-b69e-ac3532b1f6a8.png">
 
-Now that we've gotten that out of the way, to actually clone a repository, all you need to do is go to its GitHub page, click the green `Code` button, select the SSH option under `Clone`, and copy the SSH URL (which looks something like `git@github.com:example_user/example_repo.git`). Then in your terminal, navigate to the directory where you want this cloned directory to live in, and clone it.
+Now that we've gotten that out of the way, to actually clone a repository, all you need to do is go to its GitHub page, click the green `Code` button, select either the SSH option or the HTTPs option under `Clone` (i.e. if you set up SSH successfully, do SSH, otherwise HTTPS), and copy the SSH/HTTPS URL (which looks something like `git@github.com:example_user/example_repo.git` or `https://github.com/example_user/example_repo.git`). Then in your terminal, navigate to the directory where you want this cloned directory to live in, and clone it.
 
 ```
 $ cd parent/directory/you/want
-$ git clone git@github.com:example_user/example_repo.git # Paste the SSH URL you copied
+$ git clone git@github.com:example_user/example_repo.git # Paste the URL you copied
 ```
 
 Now you have made a local repository by cloning the origin repository. Nice work!
