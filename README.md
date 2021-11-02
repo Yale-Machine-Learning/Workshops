@@ -80,6 +80,8 @@ $ git config --global user.email
 
 ### Authenticating with GitHub from Git via SSH
 
+_Note: If you have trouble with SSH, you can also authenticate via HTTPS. Check out the docs [here](https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls)._
+
 Now that you've got Git set up on your machine, you need to authenticate with GitHub so that when you connect to a GitHub repository from Git in your terminal, youll have authorization to push changes to the code.
 
 You can connect either over HTTPS or SSH. While HTTPS is a bit easier initially, SSH is used more in industry (and automates some processes when you push changes), so we'll use that.
