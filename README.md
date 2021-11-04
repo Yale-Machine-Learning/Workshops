@@ -9,6 +9,10 @@ Docs and code samples from workshops, including software setup and PyTorch/Tenso
 
 # Software Setup <a name="software-setup"></a>
 
+_Video Walkthroughs:_ We encourage you to try and setup following the docs directly, but these videos can also be helpful if you want to see it done live.
+- IDE and Version Control with Git and GitHub: [video link](https://youtu.be/avb3kzJkleU)
+- Dependency Management and Virtual Environments with Conda: [video link](https://youtu.be/PfQzGgoxagY)
+
 ## Integrated Development Environment (IDE) <a name="ide"></a>
 
 An integrated development environment (or IDE) is the application you use to write your code (i.e. a "source code editor"), and it's often bundled with debugging tools, a version control GUI, clickable class hierarchies, build tools, and so on. We'll be using VSCode, which is a popular IDE used in both research and industry. (PyCharm is another great option, particularly to debug Python — but we'll stick with VSCode.)
