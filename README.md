@@ -12,8 +12,8 @@ Docs and code samples from workshops, including software setup and PyTorch/Tenso
 # Software Setup <a name="software-setup"></a>
 
 _Video Walkthroughs:_ We encourage you to try and setup following the docs directly, but these videos can also be helpful if you want to see it done live.
-- IDE and Version Control with Git and GitHub: [video link](https://youtu.be/avb3kzJkleU)
-- Dependency Management and Virtual Environments with Conda: [video link](https://youtu.be/PfQzGgoxagY)
+- IDE and Version Control with Git and GitHub: [[video link]](https://youtu.be/avb3kzJkleU)
+- Dependency Management and Virtual Environments with Conda: [[video link]](https://youtu.be/PfQzGgoxagY)
 
 ## Integrated Development Environment (IDE) <a name="ide"></a>
 
