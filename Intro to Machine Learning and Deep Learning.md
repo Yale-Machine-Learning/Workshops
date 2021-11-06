@@ -11,7 +11,7 @@ This page also contains links to video walkthroughs corresponding to several of 
 ## Introduction to Deep Learning
 - What is a neural network? [[video link]](https://www.youtube.com/watch?v=aircAruvnKk)
 - Gradient descent: how neural networks learn [[video link]](https://www.youtube.com/watch?v=IHZwWFHWa-w)
-- What is backpropagation? [[video link]](https://www.youtube.com/watch?v=Ilg3gGewQ5U)
+- _(Optional)_ What is backpropagation? [[video link]](https://www.youtube.com/watch?v=Ilg3gGewQ5U)
 
 ## PyTorch Tutorial Workshop
 - Part 1: Exploring the FashionMNIST dataset and coding the neural network model [TBA]
