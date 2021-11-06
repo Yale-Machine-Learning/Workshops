@@ -6,6 +6,8 @@ Docs and code samples from workshops, including software setup and PyTorch/Tenso
   - [Version Control](#version-control)
   - [Dependency Management and Virtual Environment](#dependency-venv)
   - [Installing PyTorch](#installing-pytorch)
+- [Introduction to Machine Learning and Deep Learning](https://github.com/Yale-Machine-Learning/Workshops/blob/main/Intro%20to%20Machine%20Learning%20and%20Deep%20Learning.md)
+  - [PyTorch Tutorial Workshop: Coding and Training an Image Classifier](https://github.com/Yale-Machine-Learning/Workshops/blob/main/Intro%20to%20Machine%20Learning%20and%20Deep%20Learning.md#pytorch-tutorial-workshop)
 
 # Software Setup <a name="software-setup"></a>
 
